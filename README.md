@@ -81,6 +81,13 @@ ComplaintSync/
 
 ## ⚙️ Installation and Setup
 
+### Prerequisites
+
+- Python 3.10 or a compatible version
+- Git
+- MongoDB, if database integration is enabled
+- Tesseract OCR, if OCR functionality is used
+
 ### 1. Clone the repository
 
 ```bash
@@ -88,36 +95,47 @@ git clone https://github.com/gaonkar0629-ux/ComplaintSync.git
 cd ComplaintSync
 ```
 
-### 2. Create a Python virtual environment
+### 2. Create and activate a virtual environment
 
-Windows:
+**Windows (Git Bash):**
 
 ```bash
 python -m venv .venv
+source .venv/Scripts/activate
+```
+
+If using Command Prompt instead:
+
+```bat
 .venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+### 3. Install Python dependencies
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r backend/requirements.txt
 ```
 
+**Note:** Packages such as PyTorch and Transformers can require substantial download space and may need compatible Python versions.
+
 ### 4. Configure environment variables
 
-Create a local `.env` file if required by your application. Add the configuration values needed by your backend, such as the MongoDB connection URI and session secret.
+Create a local `.env` file in the project directory if required by your application. Configure the required database URI and secret keys according to your backend code.
 
-**Never commit passwords, API keys, or your `.env` file to GitHub.**
+Do not upload `.env` files, credentials, private datasets, or real student information to GitHub.
 
-### 5. Start the application
-
-If `backend/app.py` is the configured Flask entry point, run:
+### 5. Run the application
 
 ```bash
 python backend/app.py
 ```
 
-Open the local URL printed by Flask in your browser. A common local development address is `http://127.0.0.1:5000`, if configured by the application.
+If the application starts successfully, open the local address printed in the terminal. For example:
+
+`http://127.0.0.1:5000`
+
+The exact address and required configuration depend on your application settings.
 
 ## 🔒 Security Notes
 
