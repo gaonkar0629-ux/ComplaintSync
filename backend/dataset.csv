@@ -1,0 +1,82 @@
+text,category,priority
+Hostel room has no water,Hostel,High
+There is no water in hostel bathroom,Hostel,High
+Hostel room fan is not working,Hostel,Medium
+Hostel food quality is very poor,Hostel,Medium
+Warden is not available in hostel,Hostel,Medium
+Hostel room is dirty,Hostel,Medium
+Hostel bathroom needs cleaning,Hostel,Medium
+My hostel room has an electricity problem,Hostel,High
+Water supply is stopped in hostel,Hostel,High
+Hostel students need better accommodation,Hostel,Low
+Library books are missing,Library,Low
+Library computer is not working,Library,Medium
+Library is closed during college hours,Library,High
+I cannot issue a library book,Library,Medium
+Library reading room fan is broken,Library,Medium
+There are not enough books in library,Library,Low
+Librarian is not available,Library,Medium
+Library computer has no internet,Library,Medium
+I need a library book urgently,Library,High
+Library chairs are broken,Library,Low
+My college fees payment failed,Fees,High
+I paid fees but payment is not showing,Fees,High
+Scholarship amount is not received,Fees,High
+I need my fee receipt,Fees,Low
+College fee refund is pending,Fees,Medium
+My scholarship application has a problem,Fees,Medium
+Fees payment portal is not working,Fees,High
+I was charged twice for fees,Fees,High
+Exam result is incorrect,Exam,High
+My marks are missing,Exam,High
+Hall ticket is not available,Exam,High
+Exam timetable is wrong,Exam,Medium
+Question paper had an error,Exam,Medium
+I have not received my examination result,Exam,High
+Exam registration is not working,Exam,High
+My exam seat number is incorrect,Exam,Medium
+There is a problem with examination form,Exam,Medium
+College bus is late,Transport,Medium
+College bus is not available,Transport,High
+Bus driver is driving dangerously,Transport,Critical
+College bus route needs to be changed,Transport,Medium
+Bus timing is incorrect,Transport,Low
+Transport service is poor,Transport,Medium
+College bus has broken seats,Transport,Medium
+Bus is overcrowded,Transport,High
+The college bus broke down,Transport,High
+Canteen food is bad,Canteen,Medium
+Canteen food quality is poor,Canteen,Medium
+Canteen is not clean,Canteen,Medium
+There is no food in canteen,Canteen,Low
+Canteen prices are too high,Canteen,Low
+Canteen staff behavior is bad,Canteen,Medium
+Canteen water is not clean,Canteen,High
+Canteen is closed during lunch,Canteen,Medium
+Food caused illness in canteen,Canteen,Critical
+College WiFi is not working,Wi-Fi,High
+Internet connection is very slow,Wi-Fi,Medium
+WiFi is not available in classroom,Wi-Fi,Medium
+Computer lab internet is down,Wi-Fi,High
+College network connection failed,Wi-Fi,High
+Students cannot connect to WiFi,Wi-Fi,Medium
+Internet is disconnected frequently,Wi-Fi,Medium
+WiFi password is not working,Wi-Fi,Low
+College server network is down,Wi-Fi,Critical
+Classroom fan is not working,Classroom,Medium
+Classroom lights are broken,Classroom,Medium
+Projector is not working,Classroom,High
+Classroom benches are damaged,Classroom,Low
+Classroom AC is not working,Classroom,Medium
+Classroom is too hot,Classroom,Medium
+There is an electrical problem in classroom,Classroom,High
+Classroom door is broken,Classroom,Medium
+Projector is urgently required for class,Classroom,Low
+College administration has a problem,General,Low
+I want to submit a general complaint,General,Low
+Student ID card problem,General,Medium
+College office is closed,General,Medium
+My student account has a problem,General,Medium
+I need help from administration,General,Low
+College notice is incorrect,General,Low
+There is a serious safety problem,General,Critical

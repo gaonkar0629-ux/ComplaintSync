@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Assistant | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page">
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="complaint.html">
+            <span>＋</span>
+            New Complaint
+        </a>
+
+        <a href="my-complaints.html">
+            <span>◷</span>
+            My Complaints
+        </a>
+
+        <a href="notifications.html">
+            <span>🔔</span>
+            Notifications
+        </a>
+
+        <a href="ai-assistant.html" class="active">
+            <span>💬</span>
+            AI Assistant
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html">
+            ⚙ Settings
+        </a>
+
+        <a href="/logout" class="logout-link">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+
+        <div>
+            <p class="dashboard-greeting">Smart support</p>
+            <h1>AI Assistant</h1>
+            <p>Describe a problem, review its AI analysis, and submit a complaint.</p>
+        </div>
+
+        <div class="header-actions">
+            <button class="notification-button">
+                🔔
+                <span></span>
+            </button>
+
+            <div class="profile-mini">
+                <div class="profile-avatar">P</div>
+                <div>
+                    <strong>Pavan</strong>
+                    <small>Student</small>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="ai-assistant-layout">
+
+        <div class="ai-assistant-panel chatbot-panel">
+
+            <div class="assistant-panel-header">
+                <div class="ai-icon">✨</div>
+                <div>
+                    <strong>AI Complaint Assistant</strong>
+                    <span>Describe your problem to prepare a complaint</span>
+                </div>
+            </div>
+
+            <div class="assistant-chat-box chatbot-messages" id="chatMessages" aria-live="polite">
+                <div class="chat-bubble ai">
+                    Hello! Describe your college problem in your own words. I will analyze its category and priority, then you can add a location and submit it.
+                </div>
+            </div>
+
+            <div class="assistant-input-row">
+                <textarea id="chatInput" rows="2" maxlength="2000" placeholder="Describe your problem..."></textarea>
+                <button type="button" id="chatSendBtn">Send</button>
+            </div>
+
+        </div>
+
+        <aside class="ai-insight-panel">
+            <div class="ai-insight-card">
+                <span class="mini-label">How it works</span>
+                <h3>Describe, review, submit</h3>
+                <p>The AI suggests a category, priority, and department. Review the result and provide the complaint location before submitting.</p>
+            </div>
+        </aside>
+
+    </section>
+
+</main>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+
+<script src="js/ai-assistant.js"></script>
+
+</body>
+
+</html>

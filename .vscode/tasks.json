@@ -1,0 +1,150 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SmartGrievance: Run Full Stack",
+			"type": "shell",
+			"command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "SmartGrievance: Run Backend",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Backend Server (Python .venv)",
+			"type": "shell",
+			"command": "C:\\pawan2\\pawan\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Restart Flask Backend .venv Port 5000",
+			"type": "shell",
+			"command": "C:\\pawan2\\pawan\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect Flask Listener PID",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-NetTCPConnection -LocalPort 5000 -State Listen | Select-Object -ExpandProperty OwningProcess"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Stop Stale Flask PID 18436",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Stop-Process -Id 18436"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Flask Backend .venv Port 5000",
+			"type": "shell",
+			"command": "C:\\pawan2\\pawan\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Inspect Port 5000 Backend Process",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$pid5000=(Get-NetTCPConnection -LocalPort 5000 -State Listen).OwningProcess; Get-CimInstance Win32_Process -Filter \"ProcessId = $pid5000\" | Select-Object ProcessId,ExecutablePath,CommandLine | Format-List"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Identify Port 5000 Owner",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-NetTCPConnection -LocalPort 5000 -State Listen | ForEach-Object { Get-Process -Id $_.OwningProcess | Format-List Id,Path,StartTime }"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Stop Stale Flask PID 15568",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Stop-Process -Id 15568"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Flask Backend .venv Port 5000 Restarted",
+			"type": "shell",
+			"command": "C:\\pawan2\\pawan\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Verify Port 5000 Listener",
+			"type": "shell",
+			"command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Get-NetTCPConnection -LocalPort 5000 -State Listen | ForEach-Object { Get-Process -Id $_.OwningProcess | Format-List Id,Path,StartTime }"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "SmartGrievance: Start Flask Frontend and API",
+			"type": "shell",
+			"command": "C:\\pawan2\\pawan\\.venv\\Scripts\\python.exe",
+			"args": [
+				"backend\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

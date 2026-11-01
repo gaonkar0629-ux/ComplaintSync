@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Create Account | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+
+</head>
+
+<body class="auth-page">
+
+
+<div class="auth-container">
+
+
+    <div class="auth-brand">
+
+        <a href="index.html"
+           class="brand">
+
+            <div class="brand-icon">
+                SG
+            </div>
+
+            <div>
+
+                <strong>SmartGrievance</strong>
+
+                <small>
+                    AI Complaint System
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <div class="auth-card">
+
+        <div class="auth-header">
+
+            <div class="auth-icon">
+                👨‍🎓
+            </div>
+
+            <h1>
+                Create Account
+            </h1>
+
+            <p>
+                Join the smart grievance platform
+            </p>
+
+        </div>
+
+
+        <form id="registerForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="student@example.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="registerDepartment">
+                    Department / Program
+                </label>
+
+                <select id="registerDepartment" required>
+
+                    <option value="" selected disabled>
+                        Select your department
+                    </option>
+
+                    <option value="CS">
+                        Computer Science (CS)
+                    </option>
+
+                    <option value="IT">
+                        Information Technology (IT)
+                    </option>
+
+                    <option value="BCOM">
+                        Bachelor of Commerce (B.Com)
+                    </option>
+
+                    <option value="BMS">
+                        Bachelor of Management Studies (BMS)
+                    </option>
+
+                    <option value="BAF">
+                        Bachelor of Accounting and Finance (BAF)
+                    </option>
+
+                    <option value="BSC">
+                        Bachelor of Science (B.Sc)
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="preferredLanguage">
+                    Preferred language
+                </label>
+
+                <select id="preferredLanguage" name="preferredLanguage">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Use 8+ characters with uppercase, lowercase, and a number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="auth-button">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+
+        <p class="auth-footer">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+
+    <p class="security-note">
+
+        🔒 Your information is securely protected.
+
+    </p>
+
+</div>
+
+
+<div id="toast"
+     class="toast">
+
+</div>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

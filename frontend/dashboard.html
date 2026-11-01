@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Dashboard | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html"
+           class="active">
+
+            <span>▦</span>
+            Dashboard
+
+        </a>
+
+
+        <a href="complaint.html">
+
+            <span>＋</span>
+            New Complaint
+
+        </a>
+
+
+        <a href="my-complaints.html">
+
+            <span>◷</span>
+            My Complaints
+
+        </a>
+
+
+        <a href="notifications.html">
+
+            <span>🔔</span>
+            Notifications
+
+        </a>
+
+
+        <a href="ai-assistant.html">
+
+            <span>💬</span>
+            AI Assistant
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html">
+
+            ⚙ Settings
+
+        </a>
+
+
+        <a href="/logout" class="logout-link">
+
+            ↪ Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="dashboard-main">
+
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <p class="dashboard-greeting" id="dashboardDate">
+                Wednesday, August 19, 2026
+            </p>
+
+            <h1 id="userGreeting">
+                Welcome, Student 👋
+            </h1>
+
+            <p>
+                Here's what's happening with your complaints.
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a class="notification-button" href="notifications.html" aria-label="View notifications">
+                🔔
+                <span></span>
+            </a>
+
+
+            <div class="profile-mini">
+
+                <div class="profile-avatar">
+                    <span data-user-initial>S</span>
+                </div>
+
+                <div>
+
+                    <strong data-user-name>
+                        Student
+                    </strong>
+
+                    <small data-user-role>
+                        Student
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- STATS -->
+
+    <section class="dashboard-stats">
+
+
+        <div class="dashboard-stat">
+
+            <div class="stat-icon blue-bg">
+                📋
+            </div>
+
+            <div>
+
+                <span>
+                    Total Complaints
+                </span>
+
+                <strong>
+                    12
+                </strong>
+
+                <small class="positive">
+                    ↑ 2 this month
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <div class="stat-icon orange-bg">
+                ⏳
+            </div>
+
+            <div>
+
+                <span>
+                    In Progress
+                </span>
+
+                <strong>
+                    4
+                </strong>
+
+                <small>
+                    Being handled
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <div class="stat-icon green-bg">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    Resolved
+                </span>
+
+                <strong>
+                    7
+                </strong>
+
+                <small class="positive">
+                    58% success rate
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="dashboard-stat">
+
+            <div class="stat-icon purple-bg">
+                🤖
+            </div>
+
+            <div>
+
+                <span>
+                    AI Analyzed
+                </span>
+
+                <strong>
+                    12
+                </strong>
+
+                <small>
+                    100% analyzed
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- CONTENT GRID -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- RECENT COMPLAINTS -->
+
+        <div class="dashboard-panel complaints-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Recent Complaints
+                    </h2>
+
+                    <p>
+                        Your latest submissions
+                    </p>
+
+                </div>
+
+                <a href="complaint.html"
+                   class="small-button">
+
+                    + New Complaint
+
+                </a>
+
+            </div>
+
+
+            <div class="complaint-list">
+
+
+                <div class="complaint-row">
+
+                    <div class="complaint-category">
+                        📡
+                    </div>
+
+                    <div class="complaint-info">
+
+                        <strong>
+                            WiFi not working in Lab 3
+                        </strong>
+
+                        <span>
+                            #CMP-2026-0012 • 2 hours ago
+                        </span>
+
+                    </div>
+
+                    <span class="status-badge progress">
+                        In Progress
+                    </span>
+
+                </div>
+
+
+                <div class="complaint-row">
+
+                    <div class="complaint-category">
+                        💧
+                    </div>
+
+                    <div class="complaint-info">
+
+                        <strong>
+                            Water leakage near hostel
+                        </strong>
+
+                        <span>
+                            #CMP-2026-0011 • Yesterday
+                        </span>
+
+                    </div>
+
+                    <span class="status-badge pending">
+                        Pending
+                    </span>
+
+                </div>
+
+
+                <div class="complaint-row">
+
+                    <div class="complaint-category">
+                        📚
+                    </div>
+
+                    <div class="complaint-info">
+
+                        <strong>
+                            Library computer issue
+                        </strong>
+
+                        <span>
+                            #CMP-2026-0009 • 3 days ago
+                        </span>
+
+                    </div>
+
+                    <span class="status-badge resolved">
+                        Resolved
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- AI INSIGHT -->
+
+        <div class="dashboard-panel ai-insight">
+
+            <div class="ai-insight-icon">
+                ✨
+            </div>
+
+            <span class="section-label">
+                AI INSIGHT
+            </span>
+
+            <h2>
+                Your complaints are being handled.
+            </h2>
+
+            <p>
+                Our AI predicts that your WiFi complaint
+                has an estimated resolution time of
+                <strong>6–12 hours.</strong>
+            </p>
+
+
+            <div class="prediction-bar">
+
+                <div style="width: 78%"></div>
+
+            </div>
+
+
+            <small>
+                AI confidence: 78%
+            </small>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="quick-section">
+
+        <h2>
+            Quick Actions
+        </h2>
+
+
+        <div class="quick-grid">
+
+
+            <a href="complaint.html"
+               class="quick-card">
+
+                <span>
+                    📝
+                </span>
+
+                <strong>
+                    Submit Complaint
+                </strong>
+
+                <small>
+                    Report a new issue
+                </small>
+
+            </a>
+
+
+            <a href="ai-assistant.html"
+               class="quick-card">
+
+                <span>
+                    🤖
+                </span>
+
+                <strong>
+                    Ask AI Assistant
+                </strong>
+
+                <small>
+                    Get instant help
+                </small>
+
+            </a>
+
+
+            <a href="my-complaints.html"
+               class="quick-card">
+
+                <span>
+                    📊
+                </span>
+
+                <strong>
+                    Track Complaint
+                </strong>
+
+                <small>
+                    View complaint progress
+                </small>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+<script>
+    const dashboardDate = document.getElementById("dashboardDate");
+    if (dashboardDate) {
+        dashboardDate.textContent = new Intl.DateTimeFormat(undefined, {
+            weekday: "long", month: "long", day: "numeric", year: "numeric"
+        }).format(new Date());
+    }
+</script>
+
+
+</body>
+
+</html>

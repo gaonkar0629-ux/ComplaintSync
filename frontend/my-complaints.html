@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Student Complaint History | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page">
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="complaint.html">
+            <span>＋</span>
+            New Complaint
+        </a>
+
+        <a href="my-complaints.html" class="active">
+            <span>◷</span>
+            My Complaints
+        </a>
+
+        <a href="notifications.html">
+            <span>🔔</span>
+            Notifications
+        </a>
+
+        <a href="ai-assistant.html">
+            <span>💬</span>
+            AI Assistant
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html">
+
+            ⚙ Settings
+
+        </a>
+        <a href="/logout" class="logout-link">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+
+        <div>
+            <p class="dashboard-greeting">Database report</p>
+            <h1>Student Complaint History</h1>
+            <p>Review student, department, complaint summary, status, and submission time.</p>
+        </div>
+
+        <div class="header-actions">
+            <button class="notification-button">
+                🔔
+                <span></span>
+            </button>
+
+            <div class="profile-mini">
+                <div class="profile-avatar"><span data-user-initial>S</span></div>
+                <div>
+                    <strong data-user-name>Student</strong>
+                    <small data-user-role>Student</small>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="complaints-summary">
+        <div class="dashboard-stat">
+            <div class="stat-icon blue-bg">📋</div>
+            <div>
+                <span>Total</span>
+                <strong id="historyTotal">—</strong>
+                <small>Total database records</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon orange-bg">⏳</div>
+            <div>
+                <span>Pending</span>
+                <strong id="historyPending">—</strong>
+                <small>Need attention</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon green-bg">✅</div>
+            <div>
+                <span>Resolved</span>
+                <strong id="historyResolved">—</strong>
+                <small>Completed</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon purple-bg">⚡</div>
+            <div>
+                <span>High Priority</span>
+                <strong id="historyHighPriority">—</strong>
+                <small>Urgent</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-complaints-panel">
+        <div class="panel-header">
+            <div>
+                <h2>My complaints</h2>
+                <p id="historyMessage" aria-live="polite">Loading your complaints…</p>
+            </div>
+            <div class="history-actions">
+                <button type="button" id="exportHistoryButton" class="small-button" disabled>Export Excel (.xlsx)</button>
+                <a href="complaint.html" class="small-button">+ New Complaint</a>
+            </div>
+        </div>
+
+        <div class="complaint-table-wrap">
+            <table class="complaint-table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Department</th>
+                        <th>Complaint</th>
+                        <th>Summary</th>
+                        <th>Location</th>
+                        <th>Evidence</th>
+                        <th>Date &amp; time</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="historyRows">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/history.js"></script>
+</body>
+
+</html>

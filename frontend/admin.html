@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SmartGrievance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/language.js" defer></script>
+</head>
+
+<body class="dashboard-page">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">SG</div>
+            <div>
+                <strong>SmartGrievance</strong>
+                <small>Admin Portal</small>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="admin.html" class="active">
+                <span>▦</span>
+                Admin Dashboard
+            </a>
+            <a href="dashboard.html">
+                <span>◫</span>
+                Student View
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="settings.html">⚙ Settings</a>
+            <a href="/logout" class="logout-link">↪ Logout</a>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div>
+                <p class="dashboard-greeting">Admin Console</p>
+                <h1 id="adminGreeting">Welcome, Admin 👋</h1>
+                <p>Monitor complaints, departments, and statuses from one place.</p>
+            </div>
+
+            <div class="header-actions">
+                <div class="profile-mini">
+                    <div class="profile-avatar">
+                        <span id="adminInitial">A</span>
+                    </div>
+                    <div>
+                        <strong id="adminName">Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="dashboard-stats">
+            <div class="dashboard-stat">
+                <div class="stat-icon blue-bg">📋</div>
+                <div>
+                    <span>Total Complaints</span>
+                    <strong id="totalComplaints">0</strong>
+                    <small class="positive">All submissions</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon orange-bg">⏳</div>
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingComplaints">0</strong>
+                    <small>Awaiting review</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon purple-bg">🔄</div>
+                <div>
+                    <span>In Progress</span>
+                    <strong id="progressComplaints">0</strong>
+                    <small>Currently active</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon green-bg">✅</div>
+                <div>
+                    <span>Resolved</span>
+                    <strong id="resolvedComplaints">0</strong>
+                    <small>Completed</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon red-bg">🚨</div>
+                <div>
+                    <span>High Priority</span>
+                    <strong id="highPriority">0</strong>
+                    <small>Needs attention</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon cyan-bg">⚠️</div>
+                <div>
+                    <span>Critical</span>
+                    <strong id="criticalPriority">0</strong>
+                    <small>Urgent</small>
+                </div>
+            </div>
+
+            <div class="dashboard-stat">
+                <div class="stat-icon gold-bg">⏱️</div>
+                <div>
+                    <span>Avg. Resolution</span>
+                    <strong id="averageResolution">0h</strong>
+                    <small>Average handling time</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="complaints-panel">
+            <div class="section-header">
+                <div>
+                    <p class="section-kicker">Operations</p>
+                    <h2>All Complaints</h2>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="complaints-table">
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Complaint</th>
+                            <th>Category</th>
+                            <th>Priority</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complaintsTable">
+                        <tr>
+                            <td colspan="7">Loading complaints...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

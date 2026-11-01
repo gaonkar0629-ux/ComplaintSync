@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Notifications | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page">
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="complaint.html">
+            <span>＋</span>
+            New Complaint
+        </a>
+
+        <a href="my-complaints.html">
+            <span>◷</span>
+            My Complaints
+        </a>
+
+        <a href="notifications.html" class="active">
+            <span>🔔</span>
+            Notifications
+        </a>
+
+        <a href="ai-assistant.html">
+            <span>💬</span>
+            AI Assistant
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html">
+            ⚙ Settings
+        </a>
+
+        <a href="/logout" class="logout-link">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+
+        <div>
+            <p class="dashboard-greeting">Notifications</p>
+            <h1>Updates & alerts</h1>
+            <p>Track complaint status changes, reminders, and admin actions.</p>
+        </div>
+
+        <div class="header-actions">
+            <button class="notification-button">
+                🔔
+                <span></span>
+            </button>
+
+            <div class="profile-mini">
+                <div class="profile-avatar">P</div>
+                <div>
+                    <strong>Pavan</strong>
+                    <small>Student</small>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="notification-panel">
+        <div class="panel-header">
+            <div>
+                <h2>Recent notifications</h2>
+                <p>Latest updates from your department and admin</p>
+            </div>
+        </div>
+
+        <div id="notificationsContainer" class="notification-list"></div>
+    </section>
+
+</main>
+
+<script src="js/notifications.js"></script>
+</body>
+
+</html>

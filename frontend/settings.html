@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Settings | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page settings-page">
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="complaint.html">
+            <span>＋</span>
+            New Complaint
+        </a>
+
+        <a href="my-complaints.html">
+            <span>◷</span>
+            My Complaints
+        </a>
+
+        <a href="notifications.html">
+            <span>🔔</span>
+            Notifications
+        </a>
+
+        <a href="ai-assistant.html">
+            <span>💬</span>
+            AI Assistant
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html" class="active">
+            ⚙ Settings
+        </a>
+
+        <a href="/logout" class="logout-link">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+<main class="dashboard-main">
+
+    <header class="dashboard-header">
+
+        <div>
+            <p class="dashboard-greeting">Settings</p>
+            <h1>Account preferences</h1>
+            <p>Control alerts, privacy, and advanced campus workflow options.</p>
+        </div>
+
+        <div class="header-actions">
+            <button class="notification-button">
+                🔔
+                <span></span>
+            </button>
+
+            <div class="profile-mini">
+                <div class="profile-avatar"><span data-user-initial>S</span></div>
+                <div>
+                    <strong data-user-name>Student</strong>
+                    <small data-user-role>Student</small>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="settings-overview">
+        <div class="dashboard-stat">
+            <div class="stat-icon blue-bg">🔒</div>
+            <div>
+                <span>Privacy</span>
+                <strong>High</strong>
+                <small class="positive">Protected</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon green-bg">⚡</div>
+            <div>
+                <span>Automation</span>
+                <strong>92%</strong>
+                <small>Smart routing</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon orange-bg">🔔</div>
+            <div>
+                <span>Alerts</span>
+                <strong>4</strong>
+                <small>Active channels</small>
+            </div>
+        </div>
+
+        <div class="dashboard-stat">
+            <div class="stat-icon purple-bg">🧠</div>
+            <div>
+                <span>AI mode</span>
+                <strong>On</strong>
+                <small>Proactive help</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="settings-shell">
+
+        <div class="settings-card settings-main-card">
+            <div class="panel-header">
+                <div>
+                    <h2>Advanced Settings</h2>
+                    <p>Customize the experience and team workflows.</p>
+                </div>
+                <button class="small-button">Save changes</button>
+            </div>
+
+            <div class="settings-group">
+
+                <div class="settings-row">
+                    <div>
+                        <h3>Enable smart AI summaries</h3>
+                        <p>Generate automated summaries for every submitted complaint.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked aria-label="Enable smart AI summaries">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div>
+                        <h3>Auto-prioritize escalations</h3>
+                        <p>Increase urgency automatically when repeat issues are detected.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked aria-label="Auto-prioritize escalations">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div>
+                        <h3>Push notifications</h3>
+                        <p>Send updates for complaint changes, approvals, and alerts.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked aria-label="Push notifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div>
+                        <h3>Anonymous feedback sharing</h3>
+                        <p>Allow the campus team to improve systems with de-identified insights.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" aria-label="Anonymous feedback sharing">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-row">
+                    <div>
+                        <h3>Advanced admin routing</h3>
+                        <p>Send complaints to department leads based on historical trends.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked aria-label="Advanced admin routing">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <aside class="settings-side-stack">
+
+            <div class="settings-card">
+                <div class="panel-header compact-header">
+                    <div>
+                        <h2>Account details</h2>
+                    </div>
+                </div>
+
+                <div class="profile-summary">
+                    <div class="profile-avatar large-avatar">P</div>
+                    <div>
+                        <strong>Pavan gaonkar</strong>
+                        <span>Student ID: 20250021</span>
+                    </div>
+                </div>
+
+                <ul class="settings-list">
+                    <li><span>Email</span><strong>pavan@smartgrievance.edu</strong></li>
+                    <li><span>Department</span><strong>Computer Science</strong></li>
+                    <li><span>Preferred time</span><strong>9:00 AM</strong></li>
+                </ul>
+            </div>
+
+            <div class="settings-card accent-card">
+                <div class="panel-header compact-header">
+                    <div>
+                        <h2>System health</h2>
+                    </div>
+                </div>
+
+                <div class="system-health">
+                    <div>
+                        <span>AI routing</span>
+                        <strong>Stable</strong>
+                    </div>
+                    <div>
+                        <span>Campus sync</span>
+                        <strong>Online</strong>
+                    </div>
+                    <div>
+                        <span>Data backup</span>
+                        <strong>Updated</strong>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>

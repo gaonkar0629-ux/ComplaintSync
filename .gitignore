@@ -1,0 +1,14 @@
+
+*.log
+.env
+.venv/
+__pycache__/
+*.pycbackend/.flask_session/
+backend/uploads/*
+!backend/uploads/.gitkeep
+*.log
+.env
+.venv/
+__pycache__/
+*.pyc
+backend/.flask_session/

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Submit Complaint | SmartGrievance
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+    <script src="js/language.js" defer></script>
+    <script src="js/session.js" defer></script>
+
+</head>
+
+<body class="dashboard-page">
+
+
+<aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <div class="brand-icon">
+            SG
+        </div>
+
+        <div>
+
+            <strong>
+                SmartGrievance
+            </strong>
+
+            <small>
+                Student Portal
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+        <a href="dashboard.html">
+            <span>▦</span>
+            Dashboard
+        </a>
+
+        <a href="complaint.html"
+           class="active">
+
+            <span>＋</span>
+            New Complaint
+
+        </a>
+
+        <a href="my-complaints.html">
+            <span>◷</span>
+            My Complaints
+        </a>
+
+        <a href="notifications.html">
+            <span>🔔</span>
+            Notifications
+        </a>
+
+        <a href="ai-assistant.html">
+            <span>💬</span>
+            AI Assistant
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="settings.html">
+
+            ⚙ Settings
+
+        </a>
+        <a href="/logout" class="logout-link">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+<main class="dashboard-main">
+
+
+    <div class="complaint-header">
+
+        <div>
+
+            <span class="section-label">
+                SMART COMPLAINT
+            </span>
+
+            <h1>
+                Report a Problem
+            </h1>
+
+            <p>
+                Describe your issue and our AI will
+                automatically analyze it.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="complaint-layout">
+
+
+        <!-- FORM -->
+
+        <section class="complaint-form-panel">
+
+            <form id="complaintForm">
+
+
+                <div class="form-section-title">
+
+                    <span>
+                        01
+                    </span>
+
+                    Complaint Details
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            autocomplete="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentDepartment">Department / Program</label>
+                        <select id="studentDepartment" required>
+                            <option value="" selected disabled>Select your department</option>
+                            <option value="CS">Computer Science (CS)</option>
+                            <option value="IT">Information Technology (IT)</option>
+                            <option value="BCOM">Bachelor of Commerce (B.Com)</option>
+                            <option value="BMS">Bachelor of Management Studies (BMS)</option>
+                            <option value="BAF">Bachelor of Accounting and Finance (BAF)</option>
+                            <option value="BSC">Bachelor of Science (B.Sc)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section-subtitle">
+                    <span>Smart templates</span>
+                    <div class="template-row">
+                        <button type="button" class="template-chip" data-title="WiFi not working in computer lab" data-description="The WiFi in the computer lab is extremely slow and keeps disconnecting. This is urgent and affects our studies." data-location="Computer Laboratory" data-category="WiFi">WiFi outage</button>
+                        <button type="button" class="template-chip" data-title="Library computer access issue" data-description="The library computers are freezing and the printers are not responding during exam preparation. Students are unable to complete assignments." data-location="Library" data-category="Library">Library issue</button>
+                        <button type="button" class="template-chip" data-title="Hostel water supply problem" data-description="The hostel water pumps are not working for the past two hours and students are struggling to access clean water for drinking and washing." data-location="Hostel" data-category="Hostel">Hostel issue</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Complaint Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="complaintTitle"
+                        placeholder="Example: WiFi not working in computer lab"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Describe your complaint
+                    </label>
+
+                    <textarea
+                        id="complaintDescription"
+                        rows="7"
+                        placeholder="Explain what happened, where it happened and when you noticed the problem..."
+                        required
+                    ></textarea>
+
+                    <input type="hidden" id="inputType" name="input_type" value="text">
+
+                    <div class="textarea-tools">
+
+                        <span>
+                            AI will analyze this description
+                        </span>
+
+                        <div class="textarea-actions">
+                            <span id="charCounter" class="char-counter">0/500</span>
+                        </div>
+
+                    </div>
+
+                    <div class="voice-input-container">
+                        <div class="voice-language">
+                            <label for="voiceLanguage">Voice language</label>
+                            <select id="voiceLanguage">
+                                <option value="en-IN">English</option>
+                                <option value="hi-IN">हिंदी</option>
+                                <option value="mr-IN">मराठी</option>
+                            </select>
+                        </div>
+                        <button type="button" id="voiceButton" class="voice-btn">🎙️ Speak complaint</button>
+                        <p id="voiceStatus" class="voice-status" aria-live="polite"></p>
+                    </div>
+
+                </div>
+
+
+                <div class="form-section-title">
+
+                    <span>
+                        02
+                    </span>
+
+                    Location & Evidence
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Location
+                        </label>
+
+                        <select id="location">
+
+                            <option value="Select location">
+                                Select location
+                            </option>
+
+                            <option value="Main Building">
+                                Main Building
+                            </option>
+
+                            <option value="Computer Laboratory">
+                                Computer Laboratory
+                            </option>
+
+                            <option value="Library">
+                                Library
+                            </option>
+
+                            <option value="Hostel">
+                                Hostel
+                            </option>
+
+                            <option value="Canteen">
+                                Canteen
+                            </option>
+
+                            <option value="Sports Ground">
+                                Sports Ground
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Complaint Category
+                        </label>
+
+                        <select id="category">
+
+                            <option value="Let AI decide">
+                                Let AI decide
+                            </option>
+
+                            <option value="Hostel">
+                                Hostel
+                            </option>
+
+                            <option value="Examination">
+                                Examination
+                            </option>
+
+                            <option value="Library">
+                                Library
+                            </option>
+
+                            <option value="Transport">
+                                Transport
+                            </option>
+
+                            <option value="Canteen">
+                                Canteen
+                            </option>
+
+                            <option value="WiFi">
+                                WiFi
+                            </option>
+
+                            <option value="Electricity">
+                                Electricity
+                            </option>
+
+                            <option value="Water">
+                                Water
+                            </option>
+
+                            <option value="Laboratory">
+                                Laboratory
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="upload-area"
+                     id="uploadArea">
+
+                    <input
+                        type="file"
+                        id="complaintImage"
+                        name="evidence"
+                        accept="image/png,image/jpeg,image/webp"
+                        hidden
+                    >
+
+                    <div class="upload-icon">
+                        📷
+                    </div>
+
+                    <strong>
+                        Upload evidence
+                    </strong>
+
+                    <p>
+                        Drag & drop an image or click to browse
+                    </p>
+
+                    <small>
+                        PNG, JPG up to 5MB
+                    </small>
+
+                </div>
+
+                <div id="imagePreview" class="evidence-preview" hidden></div>
+                <div id="ocrResult" class="ocr-result" aria-live="polite" hidden></div>
+
+                <div class="upload-actions">
+                    <button type="button" class="camera-button" id="cameraButton">
+                        📸 Use Camera
+                    </button>
+                </div>
+
+                <div class="camera-modal hidden" id="cameraModal" aria-modal="true" role="dialog">
+                    <div class="camera-panel">
+                        <div class="camera-header">
+                            <strong>Capture evidence</strong>
+                            <button type="button" class="close-camera" id="closeCameraButton">✕</button>
+                        </div>
+
+                        <video id="cameraPreview" autoplay playsinline muted></video>
+                        <canvas id="cameraCanvas" hidden></canvas>
+
+                        <div class="camera-controls">
+                            <button type="button" id="capturePhotoButton" class="capture-button">Capture Photo</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-complaint-button">
+
+                    ✨ Analyze & Submit Complaint
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- AI PANEL -->
+
+        <aside class="complaint-ai-panel">
+
+            <div class="ai-panel-header">
+
+                <div class="ai-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI Assistant
+                    </strong>
+
+                    <span>
+                        Ready to analyze
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="assistant-quick-actions">
+                <button type="button" class="assistant-action" data-action="summary">Summary</button>
+                <button type="button" class="assistant-action" data-action="rewrite">Rewrite</button>
+                <button type="button" class="assistant-action" data-action="escalate">Escalate</button>
+            </div>
+
+            <div class="assistant-chat" id="assistantChat">
+                <div class="chat-bubble ai">
+                    I can review the complaint, suggest the right escalation, and help draft an update to the department.
+                </div>
+            </div>
+
+            <div class="assistant-input-row">
+                <input type="text" id="assistantPrompt" placeholder="Ask AI assistant..." />
+                <button type="button" id="assistantSend">Send</button>
+            </div>
+
+
+            <div class="ai-placeholder"
+                 id="aiPlaceholder">
+
+                <div>
+                    🤖
+                </div>
+
+                <h3>
+                    AI Analysis
+                </h3>
+
+                <p>
+                    Once you describe your complaint,
+                    AI will predict category, priority,
+                    sentiment and responsible department.
+                </p>
+
+            </div>
+
+
+            <div class="ai-analysis-result"
+                 id="aiResult"
+                 style="display:none;">
+
+
+                <div class="analysis-item">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong id="aiCategory">
+                        WiFi
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>
+                        Priority
+                    </span>
+
+                    <strong
+                        id="aiPriority"
+                        class="critical-text">
+
+                        HIGH
+
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>
+                        Sentiment
+                    </span>
+
+                    <strong id="aiSentiment">
+                        Frustrated
+                    </strong>
+
+                </div>
+
+
+                <div class="analysis-item">
+
+                    <span>
+                        Department
+                    </span>
+
+                    <strong id="aiDepartment">
+                        CS Department
+                    </strong>
+
+                </div>
+
+
+                <div class="confidence">
+
+                    <div>
+
+                        <span>
+                            AI Confidence
+                        </span>
+
+                        <strong id="aiConfidence">
+                            92%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div id="confidenceFill" style="width:92%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ai-suggestions" id="aiSuggestions">
+                    <div class="suggestion-item">
+                        <span class="suggestion-label">Recommended action</span>
+                        <strong>Route the WiFi complaint to the CS support team with a quick response deadline.</strong>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+
+<script src="js/complaint.js"></script>
+
+</body>
+
+</html>
